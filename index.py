@@ -292,10 +292,7 @@ class Util:  # 统一的类
 
     @staticmethod
     def SendMessage(title: str, content: str,):
-#         if QMSG_KEY == '':
-#             Util.log("未配置QMSG酱，消息不会推送")
-#             return False
-        data =  {
+        params =  {
               "appToken":"AT_xtkqJUWjpNSFyRNZ7IRXhu6ohjnIlDGo",
               "content":"打卡成功",
               "contentType":1,
@@ -305,7 +302,7 @@ class Util:  # 统一的类
         }
         headers = {'content-type': 'application/json'}
         try:
-            res = requests.requests.get('http://wxpusher.zjiecode.com/api/send/message',params = data)
+            res = requests.get('http://wxpusher.zjiecode.com/api/send/message',params = data)
         finally: 
             Util.log(res)
             Util.log('调用了')
