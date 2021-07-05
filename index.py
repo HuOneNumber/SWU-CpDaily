@@ -298,9 +298,8 @@ class Util:  # 统一的类
         data =  {
               "appToken":"AT_Y069Qt5I2EDcNgpeH6dwZGUoWpJnuMcn",
               "content":title+"\n"+content,
-              "contentType":1,//内容类型 1表示文字  2表示html(只发送body标签内部的数据即可，不包括body标签) 3表示markdown 
-
-              "uids":[//发送目标的UID，是一个数组。注意uids和topicIds可以同时填写，也可以只填写一个。
+              "contentType":1,
+              "uids":[
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
               ]
         }
