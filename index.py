@@ -300,7 +300,7 @@ class Util:  # 统一的类
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
               ]
         }
-        headers = {'Content-Type:application/json'}
+        headers = {"Content-Type":"application/json"}
         try:
             res = requests.post('http://wxpusher.zjiecode.com/api/send/message',data = data, headers = headers)
         finally: 
