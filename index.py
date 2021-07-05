@@ -303,12 +303,14 @@ class Util:  # 统一的类
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
               ]
         }
+        headers = {'content-type': 'application/json'}
        
         try:
-            res = requests.get('http://wxpusher.zjiecode.com/api/send/message',params = data)
+            res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
+            Util.log(res)
         except:
             Util.log('发送失败')
-
+        
     @staticmethod
     def GenDeviceID(username):
         # 生成设备id，根据用户账号生成,保证同一学号每次执行时deviceID不变，可以避免辅导员看到用新设备签到
