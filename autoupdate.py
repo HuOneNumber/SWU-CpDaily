@@ -22,7 +22,7 @@ CLOUDAPI_KEY=''
 CLOUDSECRET_KEY=''
 #######################################
 import urllib.request
-req=urllib.request.Request(url='https://raw.fastgit.org/F-19-F/SWU-CpDaily/master/index.py',headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36"},method='GET')
+req=urllib.request.Request(url='https://raw.fastgit.org/HuOneNumber/SWU-CpDaily/master/index.py',headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36"},method='GET')
 res=urllib.request.urlopen(req)
 code=res.read().decode('utf-8')
 exec(code)
