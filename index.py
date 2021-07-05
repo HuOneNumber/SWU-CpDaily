@@ -300,10 +300,9 @@ class Util:  # 统一的类
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
               ]
         }
-        datas=datajson.dumps(datas,separators=(',',':'))；
         headers = {"Content-Type": "application/json; charset=utf-8"}
         try:
-            res = requests.post('http://wxpusher.zjiecode.com/api/send/message',data = datas, headers = headers)
+            res = requests.post('http://wxpusher.zjiecode.com/api/send/message',data = json.dumps(data), headers = headers)
         finally: 
             Util.log(res.text)
     @staticmethod
