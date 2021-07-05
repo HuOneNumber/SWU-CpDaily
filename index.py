@@ -296,7 +296,7 @@ class Util:  # 统一的类
             Util.log("未配置QMSG酱，消息不会推送")
             return False
         data =  {
-              "appToken":"AT_Y069Qt5I2EDcNgpeH6dwZGUoWpJnuMcn",
+              "appToken":"AT_xtkqJUWjpNSFyRNZ7IRXhu6ohjnIlDGo",
               "content":title+"\n"+content,
               "contentType":1,
               "uids":[
@@ -307,10 +307,10 @@ class Util:  # 统一的类
        
         try:
             res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
-            Util.log(res)
         except:
             Util.log('发送失败')
-        
+        else:
+            Util.log(res)
     @staticmethod
     def GenDeviceID(username):
         # 生成设备id，根据用户账号生成,保证同一学号每次执行时deviceID不变，可以避免辅导员看到用新设备签到
