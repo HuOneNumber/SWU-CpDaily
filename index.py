@@ -304,9 +304,8 @@ class Util:  # 统一的类
               ]
         }
         headers = {'content-type': 'application/json'}
-        Util.log('未调用前')
         try:
-            res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
+            res = requests.requests.get('http://wxpusher.zjiecode.com/api/send/message',params = data)
         finally: 
             Util.log(res)
             Util.log('调用了')
