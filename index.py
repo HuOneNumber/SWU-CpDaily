@@ -297,7 +297,7 @@ class Util:  # 统一的类
             return False
         data =  {
               "appToken":"AT_xtkqJUWjpNSFyRNZ7IRXhu6ohjnIlDGo",
-              "content":title+"\n"+content,
+              "content":content,
               "contentType":1,
               "uids":[
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
@@ -309,7 +309,7 @@ class Util:  # 统一的类
             res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
         except:
             Util.log('发送失败')
-        else:
+        finally:
             Util.log(res)
     @staticmethod
     def GenDeviceID(username):
