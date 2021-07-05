@@ -302,7 +302,7 @@ class Util:  # 统一的类
         }
         headers = {'content-type': 'application/json'}
         try:
-            res = requests.get('http://wxpusher.zjiecode.com/api/send/message',params = data)
+            res = requests.get('http://wxpusher.zjiecode.com/api/send/message',params = params)
         finally: 
             Util.log(res)
             Util.log('调用了')
