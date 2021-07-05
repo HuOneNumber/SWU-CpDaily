@@ -302,12 +302,11 @@ class Util:  # 统一的类
 
               "uids":[//发送目标的UID，是一个数组。注意uids和topicIds可以同时填写，也可以只填写一个。
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
-              ],
+              ]
         }
        
         try:
-            res = requests.post(
-                url='http://wxpusher.zjiecode.com/api/send/message',data = data)
+            res = requests.get('http://wxpusher.zjiecode.com/api/send/message',params = data)
         except:
             Util.log('发送失败')
 
