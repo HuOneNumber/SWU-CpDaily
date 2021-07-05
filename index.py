@@ -294,7 +294,7 @@ class Util:  # 统一的类
     def SendMessage(title: str, content: str,):
         data = {
               "appToken":"AT_xtkqJUWjpNSFyRNZ7IRXhu6ohjnIlDGo",
-              "content":"success",
+              "content":"打卡成功",
               "contentType":1,
               "uids":[
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
