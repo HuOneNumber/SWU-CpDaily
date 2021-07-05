@@ -304,7 +304,7 @@ class Util:  # 统一的类
               ]
         }
         headers = {'content-type': 'application/json'}
-       
+        Util.log('调用了')
         try:
             res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
         except:
