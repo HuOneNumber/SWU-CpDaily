@@ -294,13 +294,13 @@ class Util:  # 统一的类
     def SendMessage(title: str, content: str,):
         data =  {
               "appToken":"AT_xtkqJUWjpNSFyRNZ7IRXhu6ohjnIlDGo",
-              "content":"打卡成功",
+              "content":"success",
               "contentType":1,
               "uids":[
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
               ]
         }
-        headers = {"Content-Type":"application/json"}
+        headers = {"content-type":"application/json"}
         try:
             res = requests.post('http://wxpusher.zjiecode.com/api/send/message',data = data, headers = headers)
         finally: 
