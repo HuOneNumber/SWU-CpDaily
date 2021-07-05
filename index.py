@@ -301,7 +301,7 @@ class Util:  # 统一的类
         }
         try:
             res = requests.post(
-                url='https://qmsg.zendee.cn/send/{}'.format(QMSG_KEY), data=data)
+                url='http://wxpusher.zjiecode.com/api/send/message/?appToken=AT_Y069Qt5I2EDcNgpeH6dwZGUoWpJnuMcn&content=123&uid=UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A')
         except:
             Util.log('发送失败')
 
