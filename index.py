@@ -305,8 +305,9 @@ class Util:  # 统一的类
         }
         headers = {'content-type': 'application/json'}
         Util.log('调用了')
-        res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
         Util.log('发送失败') 
+        res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
+        
         Util.log(res)
     @staticmethod
     def GenDeviceID(username):
