@@ -292,7 +292,7 @@ class Util:  # 统一的类
 
     @staticmethod
     def SendMessage(title: str, content: str,):
-        params =  {
+        data =  {
               "appToken":"AT_xtkqJUWjpNSFyRNZ7IRXhu6ohjnIlDGo",
               "content":"打卡成功",
               "contentType":1,
@@ -302,9 +302,10 @@ class Util:  # 统一的类
         }
         headers = {'content-type': 'application/json'}
         try:
-            res = requests.get('http://wxpusher.zjiecode.com/api/send/message',params = params)
+            res = requests.post('http://wxpusher.zjiecode.com/api/send/message',data = data, headers = headers)
         finally: 
-            Util.log(res)
+            Util.log(res.text)
+            Util.log(res.json())
             Util.log('调用了')
     @staticmethod
     def GenDeviceID(username):
