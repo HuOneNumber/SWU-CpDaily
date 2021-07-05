@@ -292,7 +292,7 @@ class Util:  # 统一的类
 
     @staticmethod
     def SendMessage(title: str, content: str,):
-        data =  {
+        data = {
               "appToken":"AT_xtkqJUWjpNSFyRNZ7IRXhu6ohjnIlDGo",
               "content":"success",
               "contentType":1,
