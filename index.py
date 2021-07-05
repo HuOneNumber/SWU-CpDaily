@@ -292,12 +292,12 @@ class Util:  # 统一的类
 
     @staticmethod
     def SendMessage(title: str, content: str,):
-        if QMSG_KEY == '':
-            Util.log("未配置QMSG酱，消息不会推送")
-            return False
+#         if QMSG_KEY == '':
+#             Util.log("未配置QMSG酱，消息不会推送")
+#             return False
         data =  {
               "appToken":"AT_xtkqJUWjpNSFyRNZ7IRXhu6ohjnIlDGo",
-              "content":content,
+              "content":"打卡成功",
               "contentType":1,
               "uids":[
                   "UID_a8gnLryfAK4WfqNKYpWPDCSbQ10A"
