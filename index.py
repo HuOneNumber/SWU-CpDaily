@@ -304,11 +304,12 @@ class Util:  # 统一的类
               ]
         }
         headers = {'content-type': 'application/json'}
-#         Util.log('调用了')
-        Util.log('发送失败') 
-        res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
-        
-        Util.log(res)
+        Util.log('未调用前')
+        try:
+            res = requests.post('http://wxpusher.zjiecode.com/api/send/message', data=data, headers=headers)
+        finally: 
+            Util.log(res)
+            Util.log('调用了')
     @staticmethod
     def GenDeviceID(username):
         # 生成设备id，根据用户账号生成,保证同一学号每次执行时deviceID不变，可以避免辅导员看到用新设备签到
